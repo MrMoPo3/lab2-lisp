@@ -50,5 +50,3 @@
   (format t "End of tests~%"))
 
 (test-cyclic-shift-left)
-
-        
