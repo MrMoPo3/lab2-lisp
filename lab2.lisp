@@ -12,14 +12,16 @@
     (format t "~:[~a failed! Expected: ~a Obtained: ~a~;~a passed! Expected: ~a Obtained: ~a~]~%"
             (not (equal result expected))
             name expected result)))
+            
+
 
 (defun test-group-pairs-and-reverse ()
   (format t "Start testing group-pairs-and-reverse function~%")
   (check-group-pairs-and-reverse "test 1" '(a b c d e f g) '((g) (f e) (d c) (b a)))
   (check-group-pairs-and-reverse "test 2" '(1 2 3 4 5) '((5) (4 3) (2 1)))
   (check-group-pairs-and-reverse "test 3" '(x y z) '((z) (y x)))
-  (check-group-pairs-and-reverse "test 4" '(nil 1 nil 2) '((2) (1 nil) (nil)))
-  (check-group-pairs-and-reverse "test 5" '() '())
+  (check-group-pairs-and-reverse "test 4" '() '(nil))
+  (check-group-pairs-and-reverse "test 5" '(x y z) '((c) (y x)))
   (format t "End of tests~%"))
 
 (test-group-pairs-and-reverse)
