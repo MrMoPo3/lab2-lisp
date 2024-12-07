@@ -70,7 +70,7 @@ CL-USER> (cyclic-shift-left '(1 2 3 4 5 6) 2)
   (check-group-pairs-and-reverse "test 2" '(1 2 3 4 5) '((5) (4 3) (2 1)))
   (check-group-pairs-and-reverse "test 3" '(x y z) '((z) (y x)))
   (check-group-pairs-and-reverse "test 4" '() '(nil))
-  (check-group-pairs-and-reverse "test 5" '(x y z) '((c) (y x)))
+  (check-group-pairs-and-reverse "test 5" '(x y c) '((c) (y x)))
   (format t "End of tests~%"))
 ```
 
@@ -84,7 +84,7 @@ test 1 passed! Expected: ((G) (F E) (D C) (B A)) Obtained: ((G) (E F) (C D)
 test 2 passed! Expected: ((5) (4 3) (2 1)) Obtained: ((5) (3 4) (1 2))
 test 3 passed! Expected: ((Z) (Y X)) Obtained: ((Z) (X Y))
 test 4 passed! Expected: (NIL) Obtained: NIL
-test 5 passed! Expected: ((C) (Y X)) Obtained: ((Z) (X Y))
+test 5 passed! Expected: ((C) (Y X)) Obtained: ((C) (X Y))
 End of tests
 ```
 
