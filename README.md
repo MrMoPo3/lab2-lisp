@@ -70,7 +70,7 @@ CL-USER> (cyclic-shift-left '(1 2 3 4 5 6) 2)
   (check-group-pairs-and-reverse "test 2" '(1 2 3 4 5) '((5) (4 3) (2 1)))
   (check-group-pairs-and-reverse "test 3" '(x y z) '((z) (y x)))
   (check-group-pairs-and-reverse "test 4" '() '(nil))
-  (check-group-pairs-and-reverse "test 5" '(x y c) '((c) (y x)))
+  (check-group-pairs-and-reverse "test 5" '(x y c) '((c) (x y)))
   (format t "End of tests~%"))
 ```
 
